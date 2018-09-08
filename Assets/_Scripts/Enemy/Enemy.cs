@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour {
         movement.Setup();
     }
 
-    public void die()
+    public void Die()
     {
         Destroy(gameObject);
     }
