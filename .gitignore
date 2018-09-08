@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Library/
 [Tt]emp/
 [Oo]bj/
@@ -37,3 +38,11 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+=======
+Library/*
+Temp/*
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp.csproj
+NavMeshComponents.sln
+NavMeshComponents.userprefs
+>>>>>>> d2addacc66c588d9fee13157cc7ee9914dd55b2d
