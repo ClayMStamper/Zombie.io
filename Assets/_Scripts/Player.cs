@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-    PlayerMove move;
+    PlayerMove movement;
+    PlayerGrowth growth;
 
     private void Start()
     {
@@ -14,12 +15,13 @@ public class Player : MonoBehaviour {
     private void Update()
     {
 
-        move.Move();
+        movement.RotateAndMove();
 
     }
 
     private void Setup(){
-        move = GetComponent<PlayerMove>();
+        movement = GetComponent<PlayerMove>();
+        growth = GetComponent<PlayerGrowth>();
     }
 
 }
