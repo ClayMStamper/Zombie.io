@@ -10,14 +10,9 @@ public class EnemyMove : MonoBehaviour
 
     public NavMeshAgent agent;
 
-    void EnemyMovement()
-    {
-        Move();
-    }
+    private Vector3 target;
 
-    void Move()
-    {
-
+    protected virtual void SetTarget(){
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
@@ -25,9 +20,14 @@ public class EnemyMove : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                agent.SetDestination(hit.point);
+                target = hit.point;
             }
         }
+    }
+
+    public void Move()
+    {
+        agent.SetDestination(target);
     }
 
 }

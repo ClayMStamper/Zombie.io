@@ -2,10 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseHumanMove : MonoBehaviour {
+public class BaseHumanMove : EnemyMove {
 
-    IMoveEnemy runAway;
+    protected override void SetTarget()
+    {
+        base.SetTarget();
+        //runs away from:
 
-    //public void Move
+        //get player postion
 
+        // calculate oppisite direction
+
+        //target
+        //target = ...
+    }
 }
