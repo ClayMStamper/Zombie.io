@@ -16,7 +16,7 @@ public class EnemyMove : MonoBehaviour
 
     public virtual void SetTarget()
     {
-        Debug.Log("should be setting target");
+//        Debug.Log("should be setting target");
         if (!idling)
         {
             StartCoroutine(Idle());
@@ -25,20 +25,20 @@ public class EnemyMove : MonoBehaviour
 
     public void Move()
     {
-        Debug.Log("Moving");
+//        Debug.Log("Moving");
         agent.SetDestination(target);
     }
 
     public void Setup()
     {
-        Debug.Log("Setting up : " + name);
+//        Debug.Log("Setting up : " + name);
         startPos = transform.position;
         agent = GetComponent<NavMeshAgent>();
     }
 
     public IEnumerator Idle()
     {
-        Debug.Log("idle");
+//        Debug.Log("idle");
         idling = true;
 
         while (!knowsAboutPlayer)
@@ -48,7 +48,7 @@ public class EnemyMove : MonoBehaviour
         }
 
         idling = false;
-        Debug.Log("no longer idling");
+//        Debug.Log("no longer idling");
         yield return null;
     }
 

@@ -42,13 +42,6 @@ public class Player : MonoBehaviour {
 
     }
 
-    private void OnTriggerEnter(Collider col)
-    {
-        if (col.gameObject.layer == zombies.layer){
-            
-        }   
-    }
-
     private void Setup(){
         movement = GetComponent<PlayerMove>();
         zombies = GetComponent<ZombiesHandler>();

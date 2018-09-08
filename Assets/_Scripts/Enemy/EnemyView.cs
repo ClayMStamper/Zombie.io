@@ -10,7 +10,7 @@ public class EnemyView : MonoBehaviour
         //9 is the interger value of the zombie layer
         if(col.gameObject.layer == 9){
 
-            Debug.Log("hit zomb");
+//            Debug.Log("hit zomb");
 
             //ref human obj
             Enemy enemy = transform.parent.GetComponent<Enemy>();
@@ -26,7 +26,7 @@ public class EnemyView : MonoBehaviour
         if (col.gameObject.layer == 9)
         {
 
-            Debug.Log("Left zomb... back to idle");
+//            Debug.Log("Left zomb... back to idle");
 
             //ref human obj
             Enemy enemy = transform.parent.GetComponent<Enemy>();

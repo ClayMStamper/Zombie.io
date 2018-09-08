@@ -18,7 +18,10 @@ public class ZombiesHandler : MonoBehaviour {
                                         Quaternion.identity,
                                         transform.parent) as GameObject;
 
+        newZom.transform.parent = transform;
         zombies.Add(newZom);
+
+        Camera.main.transform.localPosition += new Vector3(0, 1, -1);
 
     }
     public void AddZombie()
@@ -29,7 +32,10 @@ public class ZombiesHandler : MonoBehaviour {
                                         Quaternion.identity,
                                         transform.parent) as GameObject;
 
+        newZom.transform.parent = transform;
         zombies.Add(newZom);
+        Camera.main.transform.localPosition += new Vector3(0, 1, -1);
+
     }
 
 }
