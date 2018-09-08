@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyController : MonoBehaviour {
+public class EnemyMove : MonoBehaviour
+{
 
     public Camera cam;
 
     public NavMeshAgent agent;
 
-	// Update is called once per frame
-	void Update () 
+    void EnemyMovement()
     {
-        if(Input.GetMouseButtonDown(0))
+        Move();
+    }
+
+    void Move()
+    {
+
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -22,5 +28,6 @@ public class EnemyController : MonoBehaviour {
                 agent.SetDestination(hit.point);
             }
         }
-	}
+    }
+
 }
