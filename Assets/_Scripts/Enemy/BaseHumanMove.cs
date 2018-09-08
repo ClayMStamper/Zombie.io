@@ -13,6 +13,7 @@ public class BaseHumanMove : EnemyMove {
         target = CalcOppDir();
      //  Debug.Log("Current pos: " + transform.position);
      //  Debug.Log("Target pos: " + target);
+        Debug.Break();
         //target
     }
     public Vector3 CalcOppDir()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [RequireComponent(typeof(EnemyMove))]
 public class Enemy : MonoBehaviour {
 
@@ -24,5 +25,10 @@ public class Enemy : MonoBehaviour {
     {
         movement = GetComponent<EnemyMove>();
         movement.Setup();
+    }
+
+    public void die()
+    {
+        Destroy(gameObject);
     }
 }
