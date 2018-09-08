@@ -32,11 +32,14 @@ public class PlayerMove : MonoBehaviour{
     {
         if (Input.GetKey(KeyCode.W))
         {
+         //   GetComponent<CharacterAnimation>().AddBlendValue(0.1f);
             transform.Translate(Vector3.forward * Time.deltaTime * moveSpeed);
-        }
-        if (Input.GetKey(KeyCode.S))
+        } else if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
+        } else {
+         //   GetComponent<CharacterAnimation>().SubtractBlendValue(0.1f);
+
         }
     }
 

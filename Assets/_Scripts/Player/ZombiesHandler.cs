@@ -21,7 +21,7 @@ public class ZombiesHandler : MonoBehaviour {
         newZom.transform.parent = transform;
         zombies.Add(newZom);
 
-        Camera.main.transform.localPosition += new Vector3(0, 1, -1);
+        Camera.main.transform.localPosition += new Vector3(0, .2f, -0.2f);
 
     }
     public void AddZombie()
@@ -34,7 +34,7 @@ public class ZombiesHandler : MonoBehaviour {
 
         newZom.transform.parent = transform;
         zombies.Add(newZom);
-        Camera.main.transform.localPosition += new Vector3(0, 1, -1);
+        Camera.main.transform.localPosition += new Vector3(0, .2f, -0.2f);
 
     }
 

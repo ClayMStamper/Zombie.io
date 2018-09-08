@@ -482,6 +482,8 @@ GameObject:
   - component: {fileID: 114136764902238946}
   - component: {fileID: 114266695443919698}
   - component: {fileID: 114341987530757748}
+  - component: {fileID: 136092195042175870}
+  - component: {fileID: 114651670677719956}
   m_Layer: 0
   m_Name: HumanA
   m_TagString: Untagged
@@ -732,7 +734,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1934918597710320}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000016292068}
-  m_LocalPosition: {x: 19.49, y: 0, z: -8.14}
+  m_LocalPosition: {x: 2.833446, y: 0, z: -2.082602}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4271152545166116}
@@ -1061,7 +1063,7 @@ Animator:
   m_GameObject: {fileID: 1934918597710320}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8ed86b8ef3190a9429964c02eaa4f31c, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f75ededa173df461d9ebdc5116f31cca, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 1
@@ -1120,6 +1122,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379f6f20d65b5403ebddb544120ead55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114651670677719956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1934918597710320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43bf8792b7d94207a22f320f4b3b755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135789498495618376
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1131,6 +1144,19 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136092195042175870
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1934918597710320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3.62
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137201747900736192
 SkinnedMeshRenderer:

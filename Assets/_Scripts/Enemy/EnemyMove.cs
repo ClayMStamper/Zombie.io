@@ -12,6 +12,8 @@ public class EnemyMove : MonoBehaviour
     public bool knowsAboutPlayer = false;
     protected Vector3 target;
 
+    CharacterAnimation anim;
+
     bool idling;
 
     public virtual void SetTarget()
@@ -25,7 +27,8 @@ public class EnemyMove : MonoBehaviour
 
     public void Move()
     {
-//        Debug.Log("Moving");
+        //        Debug.Log("Moving");
+        anim.SetBlendValue(Vector3.Distance(transform.position, target));
         agent.SetDestination(target);
     }
 
@@ -34,6 +37,7 @@ public class EnemyMove : MonoBehaviour
 //        Debug.Log("Setting up : " + name);
         startPos = transform.position;
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<CharacterAnimation>();
     }
 
     public IEnumerator Idle()
@@ -43,6 +47,7 @@ public class EnemyMove : MonoBehaviour
 
         while (!knowsAboutPlayer)
         {
+           // GetComponent<CharacterAnimation>().SubtractBlendValue(0.2f);
             target = SetRandomTarget();
             yield return new WaitForSeconds(Random.Range(2, 7));
         }

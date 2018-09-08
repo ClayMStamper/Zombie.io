@@ -7,13 +7,16 @@ using UnityEngine.AI;
 public class ZombieMove : MonoBehaviour {
 
     NavMeshAgent agent;
+    CharacterAnimation anim;
 
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<CharacterAnimation>();
 	}
 
     private void Update()
     {
+        anim.SetBlendValue(Vector3.Distance(transform.position, transform.parent.position));
         agent.SetDestination(transform.parent.position);
     }
 

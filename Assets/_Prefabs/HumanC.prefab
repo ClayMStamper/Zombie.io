@@ -375,6 +375,8 @@ GameObject:
   - component: {fileID: 114296233356713904}
   - component: {fileID: 114680079084717660}
   - component: {fileID: 195585990510067476}
+  - component: {fileID: 136690118483885566}
+  - component: {fileID: 114823015362329530}
   m_Layer: 0
   m_Name: HumanC
   m_TagString: Untagged
@@ -716,7 +718,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1693069688174692}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000016292068}
-  m_LocalPosition: {x: 11.13, y: 0, z: -8.6}
+  m_LocalPosition: {x: -3.6926217, y: 0, z: -4.2725964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4676224473932270}
@@ -987,7 +989,7 @@ Animator:
   m_GameObject: {fileID: 1693069688174692}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: fbbb7e0ccd296444f8f4cb972237bf3a, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f75ededa173df461d9ebdc5116f31cca, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1046,6 +1048,17 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!114 &114823015362329530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693069688174692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a43bf8792b7d94207a22f320f4b3b755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135760935581136456
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1057,6 +1070,19 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136690118483885566
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1693069688174692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3.62
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!137 &137899911285275862
 SkinnedMeshRenderer:
