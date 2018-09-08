@@ -2,10 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof (PlayerMove))]
+[RequireComponent(typeof(ZombiesHandler))]
 public class Player : MonoBehaviour {
 
+    #region singleton
+
+    private static Player instance;
+
+    private void Awake()
+    {
+        if (instance == null){
+            instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+    }
+
+    public static Player GetInstance(){
+        return instance;
+    }
+
+    #endregion
+
     PlayerMove movement;
-    PlayerGrowth growth;
+    ZombiesHandler zombies;
+
+    int zombieLayer = 9;
 
     private void Start()
     {
@@ -19,9 +42,16 @@ public class Player : MonoBehaviour {
 
     }
 
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.layer == zombies.layer){
+            
+        }   
+    }
+
     private void Setup(){
         movement = GetComponent<PlayerMove>();
-        growth = GetComponent<PlayerGrowth>();
+        zombies = GetComponent<ZombiesHandler>();
     }
 
 }
