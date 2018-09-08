@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class BaseHumanMove : EnemyMove {
 
-    protected override void SetTarget()
+    public override void SetTarget()
     {
-        base.SetTarget();
-        //runs away from:
+        //base.SetTarget();
 
         //get player postion
 
-        // calculate oppisite direction
-
+        target = CalcOppDir();
+     //  Debug.Log("Current pos: " + transform.position);
+     //  Debug.Log("Target pos: " + target);
         //target
-        //target = ...
     }
+    public Vector3 CalcOppDir()
+    {
+
+        GameObject playerObject = GameObject.Find("Player");
+        Vector3 heading = transform.position - playerObject.transform.position;
+        return heading;
+
+    }
+
+    
 }
