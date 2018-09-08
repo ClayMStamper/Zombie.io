@@ -6,7 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyMove))]
 public class Enemy : MonoBehaviour {
 
-    EnemyMove movement;
+    [HideInInspector]
+    public EnemyMove movement;
 
 	// Use this for initialization
 	void Start () 

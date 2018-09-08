@@ -6,15 +6,13 @@ public class BaseHumanMove : EnemyMove {
 
     public override void SetTarget()
     {
-        //base.SetTarget();
+        base.SetTarget();
 
-        //get player postion
+        if (knowsAboutPlayer)
+        {
+            target = CalcOppDir();
+        }
 
-        target = CalcOppDir();
-     //  Debug.Log("Current pos: " + transform.position);
-     //  Debug.Log("Target pos: " + target);
-        Debug.Break();
-        //target
     }
     public Vector3 CalcOppDir()
     {
